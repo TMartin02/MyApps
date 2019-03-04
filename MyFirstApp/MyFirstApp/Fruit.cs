@@ -10,6 +10,15 @@ namespace MyFirstApp
     {
        public string neve;
        public string helye;
-       public  int menyesig;
+       public  int menyiseg;
+
+       public Fruit(string Neve, string helye, int menyiseg)
+        {
+            neve = neve;
+            helye = helye;
+            menyiseg = menyiseg;
+            Console.WriteLine("DEBUG: Fruit() konstruktor meghívás");
+
+        }
     }
 }

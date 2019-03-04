@@ -12,6 +12,7 @@ namespace MyFirstApp
        public string helye;
        public  int menyiseg;
 
+
        public Fruit(string Neve, string helye, int menyiseg)
         {
             neve = neve;

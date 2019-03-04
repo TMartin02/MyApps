@@ -38,6 +38,7 @@ namespace MyFirstApp
 
             }
             Console.WriteLine("Gyümölcs összes mennyisége:" + osszmeny);
+
             Console.ReadKey();
        
         }

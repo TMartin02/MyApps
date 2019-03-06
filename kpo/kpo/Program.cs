@@ -19,6 +19,7 @@ namespace kpo
 
             bool moreGame = true;
 
+            ///Feladat
             Console.WriteLine("**********Kő/Papír/Olló játék**********");
 
             do

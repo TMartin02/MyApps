@@ -20,6 +20,7 @@ namespace kpo
             ///Citlus programfutatás, amíg a felhasználó szeretne játszani
 
             bool moreGame = true;
+            Random r = new Random();
 
             ///Feladat változók létrehozása
             
@@ -40,16 +41,57 @@ namespace kpo
 
                 switch (Console.ReadKey(true).KeyChar)
                     {
-                    case 'k'..
+                    case 'k':
                     playerChoice = "kő";
                     break;
-                    case'p'..
+                    case'p':
                     playerChoice = "papír";
                     break;
-                    case 'o'..
+                    case 'o':
                     playerChoice = "olló";
                     break;
                     }
+                ///Feladat 4:
+                ///Számítógép választásának kérdése: Random()
+                ///
+                switch (r.Next(0, 3))
+                    {
+                    case '0':
+                    playerChoice = "kő";
+                    break;
+                    case'1':
+                    playerChoice = "papír";
+                    break;
+                    case '2':
+                    playerChoice = "olló";
+                    break;
+                    }
+                ///Feladat 5: Értékeljük ki a compChoice és a playerChoice
+                ///változókat
+                ///
+
+                if(
+                    (playerChoice == "kő" && compChoice == "papír") ||
+                    (playerChoice == "papír" && compChoice == "olló") ||
+                    (playerChoice == "olló" && compChoice == "kő") 
+                  )
+                    {
+                    Console.WriteLine("Számítógép:" + compChoice + "Te" + playerChoice);
+                    Console.WriteLine("Veszítetzél! Állás : Szg: {0} Játékos: {1}", ++compScore, playerScore);
+                    }
+                else if(playerChoice ==compChoice)
+                    {
+                     Console.WriteLine("Számítógép:" + compChoice + "Te" + playerChoice);
+                    Console.WriteLine("Döntetlen! Állás : Szg: {0} Játékos: {1}", compScore, playerScore);
+                    }
+                else
+                    {
+                       Console.WriteLine("Számítógép:" + compChoice + "Te" + playerChoice);
+                    Console.WriteLine("Nyertél! Állás : Szg: {0} Játékos: {1}", compScore, ++playerScore);
+                    }
+
+                    
+
                 Console.Write("Akarsz még játszani? i/n");
                 if (Console.ReadKey(true).KeyChar == 'n')
                 {

@@ -10,6 +10,8 @@ namespace kpo
     {
         static void Main(string[] args)
         {
+
+
             ///Program: Kő papír olló játék leprogramozása
             ///Irta: Tomek Martin / 2019.03.06
             ///Adott: számítógép - véletlenszerű válasz

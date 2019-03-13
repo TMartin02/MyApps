@@ -15,6 +15,8 @@ namespace esf
             
 
             Console.WriteLine(ex.Name);
+            ex.PrintName();
+            Console.WriteLine(ex.getName());
 
             Console.ReadKey();
 

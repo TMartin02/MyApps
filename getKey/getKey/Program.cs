@@ -10,7 +10,7 @@ namespace getKey
     {
         static void Main(string[] args)
         {
-            do
+            switch(Console.ReadKey(true).KeyChar)
             {
                 case '0':
                 Console.WriteLine("szám");

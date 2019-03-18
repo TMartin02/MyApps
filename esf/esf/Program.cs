@@ -59,6 +59,9 @@ namespace esf
                     break;
                     case 5
             }
+            s = Console.ReadLine();
+            Console.WriteLine("Beolvasás konzolról:" + s);
+            
 
             Console.ReadKey();
 

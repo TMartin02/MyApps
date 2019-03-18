@@ -56,13 +56,13 @@ namespace kpo
                 ///
                 switch (r.Next(0, 3))
                     {
-                    case '0':
+                    case 0:
                     playerChoice = "kő";
                     break;
-                    case'1':
+                    case 1:
                     playerChoice = "papír";
                     break;
-                    case '2':
+                    case 2:
                     playerChoice = "olló";
                     break;
                     }

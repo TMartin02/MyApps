@@ -76,17 +76,24 @@ namespace kpo
                     (playerChoice == "olló" && compChoice == "kő") 
                   )
                     {
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
                     Console.WriteLine("Számítógép:["  + compChoice + "] Te:[" + playerChoice + "]");
+                    Console.ResetColor();
                     Console.WriteLine("Veszítettél! \nÁllás : Szg: {0} Játékos: {1}", ++compScore, playerScore);
                     }
-                else if(playerChoice ==compChoice)
+                else if(playerChoice == compChoice)
                     {
-                     Console.WriteLine("Számítógép:[" + compChoice + "] Te:[" + playerChoice + "]");
+                    
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    Console.WriteLine("Számítógép:[" + compChoice + "] Te:[" + playerChoice + "]");
+                    Console.ResetColor();
                     Console.WriteLine("Döntetlen!\n Állás : Szg: {0} Játékos: {1}", compScore, playerScore);
                     }
                 else
                     {
-                       Console.WriteLine("Számítógép:[" + compChoice + "] Te:[" + playerChoice + "]");
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    Console.WriteLine("Számítógép:[" + compChoice + "] Te:[" + playerChoice + "]");
+                    Console.ResetColor();
                     Console.WriteLine("Nyertél!\n Állás : Szg: {0} Játékos: {1}", compScore, ++playerScore);
                     }
 

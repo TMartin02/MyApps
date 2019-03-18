@@ -57,13 +57,13 @@ namespace kpo
                 switch (r.Next(0, 3))
                     {
                     case 0:
-                    playerChoice = "kő";
+                    compChoice = "kő";
                     break;
                     case 1:
-                    playerChoice = "papír";
+                    compChoice = "papír";
                     break;
                     case 2:
-                    playerChoice = "olló";
+                    compChoice = "olló";
                     break;
                     }
                 ///Feladat 5: Értékeljük ki a compChoice és a playerChoice
@@ -76,17 +76,17 @@ namespace kpo
                     (playerChoice == "olló" && compChoice == "kő") 
                   )
                     {
-                    Console.WriteLine("Számítógép:" + compChoice + "Te" + playerChoice);
-                    Console.WriteLine("Veszítetzél! Állás : Szg: {0} Játékos: {1}", ++compScore, playerScore);
+                    Console.WriteLine("Számítógép: "  + compChoice + " Te: " + playerChoice);
+                    Console.WriteLine("Veszítettél! Állás : Szg: {0} Játékos: {1}", ++compScore, playerScore);
                     }
                 else if(playerChoice ==compChoice)
                     {
-                     Console.WriteLine("Számítógép:" + compChoice + "Te" + playerChoice);
+                     Console.WriteLine("Számítógép: " + compChoice + " Te: " + playerChoice);
                     Console.WriteLine("Döntetlen! Állás : Szg: {0} Játékos: {1}", compScore, playerScore);
                     }
                 else
                     {
-                       Console.WriteLine("Számítógép:" + compChoice + "Te" + playerChoice);
+                       Console.WriteLine("Számítógép: " + compChoice + " Te: " + playerChoice);
                     Console.WriteLine("Nyertél! Állás : Szg: {0} Játékos: {1}", compScore, ++playerScore);
                     }
 

@@ -76,17 +76,17 @@ namespace kpo
                     (playerChoice == "olló" && compChoice == "kő") 
                   )
                     {
-                    Console.WriteLine("Számítógép:["  + compChoice + "] Te:->" + playerChoice);
+                    Console.WriteLine("Számítógép:["  + compChoice + "] Te:[" + playerChoice + "]");
                     Console.WriteLine("Veszítettél! \nÁllás : Szg: {0} Játékos: {1}", ++compScore, playerScore);
                     }
                 else if(playerChoice ==compChoice)
                     {
-                     Console.WriteLine("Számítógép:[" + compChoice + "] Te:->" + playerChoice);
+                     Console.WriteLine("Számítógép:[" + compChoice + "] Te:[" + playerChoice + "]");
                     Console.WriteLine("Döntetlen!\n Állás : Szg: {0} Játékos: {1}", compScore, playerScore);
                     }
                 else
                     {
-                       Console.WriteLine("Számítógép:[" + compChoice + "] Te:-> " + playerChoice);
+                       Console.WriteLine("Számítógép:[" + compChoice + "] Te:[" + playerChoice + "]");
                     Console.WriteLine("Nyertél!\n Állás : Szg: {0} Játékos: {1}", compScore, ++playerScore);
                     }
 

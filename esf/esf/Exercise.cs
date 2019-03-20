@@ -19,18 +19,21 @@ namespace esf
         {
             Name = aName;
         }
+
         public void printName()
         {
             Console.WriteLine(Name);
         }
+
         public void getName();
-
         {
-       return Name;
+         return Name;
         }
-      for (int i = 0; iclength; i++)
+
+         for (int i = 0; iclength; i++)
         {
 
         }
-    }
+
+   
 

@@ -24,16 +24,18 @@ namespace esf
         {
             Console.WriteLine(Name);
         }
-
-        public void getName();
+        public string getName()
         {
-         return Name;
+            return Name;
         }
+        
+            
+        
+    }
+}
 
-         for (int i = 0; iclength; i++)
-        {
 
-        }
+         
 
    
 

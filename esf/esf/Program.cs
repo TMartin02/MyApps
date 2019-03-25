@@ -8,18 +8,16 @@ namespace esf
 {
     class Program
     {
-        public static string Name { get; private set; }
-        public static string Author { get; private set; }
-        public static int Page { get; private set; }
-
         static void Main(string[] args)
         {
+            int v = 0;
+            string s;
             Exercise ex = new Exercise("Tomek Martin");
 
-            
+
 
             Console.WriteLine(ex.Name);
-            ex.PrintName();
+            ex.printName();
             Console.WriteLine(ex.getName());
             for (int i = 0; i < 2; i++)
             {
@@ -38,7 +36,7 @@ namespace esf
             do
             {
                 Console.WriteLine("Do ciklus");
-                var--;
+                v--;
 
             } while (v > 0);
             v = 2;
@@ -55,15 +53,18 @@ namespace esf
             {
                 Console.WriteLine("V nem 2 és nem 3, hanem" + v);
             }
-             v = 6;
+            v = 6;
             switch (v)
             {
                 case 0:
-                    Console.WriteLine("Switch" + v);
+                    Console.WriteLine("Switch:" + v);
                     break;
-                   
+                case 3:
+                    Console.WriteLine("Switch:" + v);
+                    break;
+
             }
-            s = Console.ReadKey();
+            s = Console.ReadLine();
             Console.WriteLine("Ez egy szöveg:");
             ///Egy billentyű leütés
             ///Console.ReadKey(true).KeyChar
@@ -73,7 +74,7 @@ namespace esf
             int[] szamok = new int[5];
             string[] szovegek = new string[10];
 
-            int[] iNums = new int[] (1,2,3,4,5,6);
+            int[] iNums = new int[]{1, 2, 3, 4, 5, 6};
             string[] sFruit = new string[] { "Alma", "Körte", "Eper", "Banán" };
             Console.WriteLine("iNums első eleme {0} sFruit első eleme{1}:", iNums[0], sFruit[0]);
             Console.WriteLine("iNums első eleme:" + iNums[0] + "sFruit első eleme:" + sFruit[0]);
@@ -98,9 +99,57 @@ namespace esf
 
             Lista.Remove(Lista.Find(x => x.Name.Contains("Oroszlánkölyök")));
 
-            Console.ReadKey();
+            bool moreBook = true;
+            string Name;
+            string Author;
+            int Page;
 
-            
+            Console.WriteLine("**************************************************************************************************");
+            Console.WriteLine("*************************üdv a könyvtár rendszeremben*********************************************");
+            Console.WriteLine("**************************************************************************************************");
+
+            do
+            {
+
+
+
+                Console.WriteLine("**************************************************************************************************");
+                Console.WriteLine("Lehetőség [u]:új könyv  [l]:listázás [t]:könyv törlése [k]:kilépés");
+                Console.WriteLine("**************************************************************************************************");
+                switch (Console.ReadKey(true).KeyChar)
+                {
+                    case 'u':
+                        Console.Write("Kérem a könyv címét:");
+                        Name = Console.ReadLine();
+                        Console.Write("Kérem a könyv szerzőjét:");
+                        Author = Console.ReadLine();
+                        Console.Write("Kérem a lapszámot:");
+                        Page = int.Parse(Console.ReadLine());
+                        Lista.Add(new Book { Name = Name, Author = Author, Page = Page });
+                        break;
+                    case 'k':
+                        moreBook = false;
+                        break;
+                    case 't':
+                        Console.Write("Kérem a könyv címét:");
+                        Name = Console.ReadLine();
+                        Lista.Remove(Lista.Find(x => x.Name.Contains(Name)));
+                        break;
+                    case '1':
+                        Console.WriteLine("Könyvtár tartalma:");
+                        foreach (Book book in Lista)
+                        {
+                            Console.WriteLine("->" + book.Name + " " + book.Author + " " + book.Page);
+                        }
+                        break;
+
+                }
+
+
+                Console.ReadKey();
+
+
+            } while (moreBook);
         }
     }
 }

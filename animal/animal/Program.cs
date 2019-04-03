@@ -11,7 +11,7 @@ namespace animal
         static void Main(string[] args)
         {
             Cat myCat = new Cat("Cirmi");
-            Dog myDog = new Dog("Buksi");
+            
             myCat.Sleep();
             myCat.Hunt();
             myCat.Sound();
@@ -19,6 +19,7 @@ namespace animal
             myCat.Child();
 
 
+            Dog myDog = new Dog("Buksi");
 
             myDog.Sleep();
             myDog.Hunt();

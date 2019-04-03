@@ -38,10 +38,7 @@ namespace animal
                 Console.WriteLine(Name + " s child name:" + item.Name);
             }
         }
-        public Cat()
-        {
-
-        }
+       
         public override void Sleep()
         {
             Console.WriteLine(Name + " is sleeping......");
@@ -62,6 +59,25 @@ namespace animal
         {
             Name = aName;
         }
+        private List<Dog> Kids;
+
+        
+        internal void Born(int v)
+        {
+            Kids = new List<Dog>();
+            for (int i = 0; i < v; i++)
+            {
+                Kids.Add(new Dog("kutyi" + i.ToString()));
+            }
+        }
+        internal void Child()
+        {
+            foreach (var item in Kids)
+            {
+                Console.WriteLine(Name + " s child name:" + item.Name);
+            }
+        }
+       
         public override void Sleep()
         {
             Console.WriteLine(Name + " is sleeping......");

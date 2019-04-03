@@ -23,6 +23,8 @@ namespace animal
             myDog.Sleep();
             myDog.Hunt();
             myDog.Sound();
+            myDog.Born(4);
+            myDog.Child();
             Console.ReadKey();
 
             

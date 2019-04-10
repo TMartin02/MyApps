@@ -32,7 +32,15 @@ namespace tipuskonverzio
             string cc = c as string;
             Console.WriteLine(cc == null ? "NULL" : cc); // NULL 
 
+            int x = 10;
+            Console.WriteLine(x == 5 ? "x ==5 " : "x != 5");
 
+            for (char ch = 'a'; ch <= 'z'; ch++)
+            {
+                Console.WriteLine(ch + "->" +(int)ch+ ' ');
+            }
+
+                                             
 
             Console.ReadKey();
 

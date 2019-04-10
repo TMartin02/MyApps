@@ -22,7 +22,7 @@ namespace tipuskonverzio
                 object a = "123";
             object b = "Hello";
             object c = 10;
-
+            
             string aa = a as string;
             Console.WriteLine(aa == null ? "NULL" : aa); // 123 
 
@@ -31,6 +31,8 @@ namespace tipuskonverzio
 
             string cc = c as string;
             Console.WriteLine(cc == null ? "NULL" : cc); // NULL 
+
+
 
             Console.ReadKey();
 

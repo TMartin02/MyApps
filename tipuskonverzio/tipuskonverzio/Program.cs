@@ -40,6 +40,18 @@ namespace tipuskonverzio
                 Console.WriteLine(ch + "->" +(int)ch+ ' ');
             }
 
+            int[] iTomb = new int[10];
+            Random r = new Random();
+            for (int i = 0; i < iTomb.Length; i++)
+            {
+                //iTomb[i] = r.next();
+                
+            }
+            for (int i = 0; i < iTomb.Length; i++)
+            {
+                Console.Write(iTomb[i] + " ");
+            }
+
                                              
 
             Console.ReadKey();

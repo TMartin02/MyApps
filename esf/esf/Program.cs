@@ -74,7 +74,7 @@ namespace esf
             int[] szamok = new int[5];
             string[] szovegek = new string[10];
 
-            int[] iNums = new int[]{1, 2, 3, 4, 5, 6};
+            int[] iNums = new int[]{k1, 2, 3, 4, 5, 6};
             string[] sFruit = new string[] { "Alma", "Körte", "Eper", "Banán" };
             Console.WriteLine("iNums első eleme {0} sFruit első eleme{1}:", iNums[0], sFruit[0]);
             Console.WriteLine("iNums első eleme:" + iNums[0] + "sFruit első eleme:" + sFruit[0]);
